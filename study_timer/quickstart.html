@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' type='text/css' href='./studystyle.css'>
+    <script type="text/javascript" src="./timer.js"></script>
+</head>
+<body>
+    <div class="timer">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
+    <div class="control">
+        <table class="timetable" cellspacing="10">
+            <tr>
+                <td><button id="startButton" onclick="start();" >Start</button></td>
+                <td><button id="pauseButton">Pause</button></td>
+            </tr>
+            <tr>
+                <td><button id="stopButton" onclick="stop();" >Stop</button></td>
+                <td><button id="resetButton" >Reset</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
