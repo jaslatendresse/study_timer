@@ -11,13 +11,19 @@
         <table class="timetable" cellspacing="10">
             <tr>
                 <td><button id="startButton" onclick="start();" >Start</button></td>
-                <td><button id="pauseButton">Pause</button></td>
+                <td><button id="pauseButton" onclick="pause();">Pause</button></td>
             </tr>
             <tr>
-                <td><button id="stopButton" onclick="stop();" >Stop</button></td>
-                <td><button id="resetButton" >Reset</button></td>
+                <td><button id="stopButton" onclick="stop();">Stop</button></td>
+                <td><button id="resetButton" onclick="reset();">Reset</button></td>
             </tr>
         </table>
     </div>
+    <div id="stopmsg"></div>
+    <div id="pause">Pause</div>
+    <div id="timer2">
+        <span id="hours2">00</span>:<span id="minutes2">00</span>:<span id="seconds2">00</span>
+    </div>
+    <footer>&#169;Jasmine Latendresse &nabla; By a student for students</footer>
 </body>
 </html>

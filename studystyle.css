@@ -1,0 +1,124 @@
+nav ul{
+    list-style-type:none;
+    margin:0 auto;
+    background-color:black;
+    padding:0;
+    overflow:hidden;
+    margin-top:50px;
+    width:426px;
+}
+
+nav ul li{
+    display:inline;
+    font-family:Courier;
+   
+}
+nav ul li a{
+    display:block;
+    color:white;
+    padding:14px 16px;
+    text-decoration:none;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color:#333;
+}
+
+.timetable{
+    margin:0 auto;
+}
+.choicebuttons{
+    background-color:white;
+    color:black;
+    width:380px;
+    border:3px solid black;
+    font-size:30px;
+    font-family:Courier;
+    text-decoration:none;
+    padding:10px;
+}
+
+.choicebuttons:hover{
+    background-color:black;
+    color:white;
+}
+
+div.control button{
+    background-color:white;
+    color:black;
+    border:3px solid black;
+    width:340px;
+    font-size:30px;
+    font-family:Courier;
+}
+
+div.timer{
+    border:2px solid black;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    font-size:36px;
+    font-family:"Courier New", Courier, monospace;
+    text-align:center;
+    margin:5px;
+    margin:0 auto;
+    margin-top:200px;
+}
+
+#timer2{
+    border:2px solid black;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    font-size:36px;
+    font-family:"Courier New", Courier, monospace;
+    text-align:center;
+    margin:5px;
+    margin:0 auto;
+    display:none;
+}
+
+#pause{
+    font-style:Courier;
+    font-size:30px;
+    display: none;
+}
+
+#stopmsg{
+    width:700px;
+    margin:0 auto;
+    font-family:Courier;
+    font-size:30px;
+    padding-left:90px;
+}
+
+#pausemsg{
+    width:700px;
+    margin:0 auto;
+    font-family:Courier;
+    font-size:30px;
+    padding-left:90px;
+}
+
+div.logo{
+    margin:0 auto;
+    width:290px;
+    height:60px;
+    background-repeat: no-repeat;
+    background-image:url('./logo.png');
+    margin-top:200px;
+}
+
+div.logo:hover{
+    background:url('./logo2.png');
+}
+
+footer{
+    background-color:black;
+    color:white;
+    text-align: center;
+    width:100%;
+    position: absolute;
+    bottom:0;
+}
