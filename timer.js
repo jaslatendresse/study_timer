@@ -17,6 +17,8 @@ function start(){
         clearInterval(timer2);
         timer2 = null;
         clicked = true;
+        document.getElementById('studying').style.display = 'block';
+        document.getElementById('pausing').style.display = 'none';
     }
     else if(clicked === true){};
 }
@@ -39,8 +41,8 @@ function setTimePause(){
 function pause(){
     clearInterval(timer);
     timer2 = setInterval('setTimePause()',1000);
-    document.getElementById('pause').innerHTML = 'Pausing';
-    document.getElementById('timer2').style.display = 'block';
+    document.getElementById('studying').style.display = 'none';
+    document.getElementById('pausing').style.display = 'block';
     timer = null;
     clicked = false;
 }
@@ -52,6 +54,8 @@ function stop(){
     timer2 = null;
     clicked = false;
     
+    document.getElementById('studying').style.display = 'none';
+    document.getElementById('pausing').style.display = 'none';
     document.getElementById('stopmsg').innerHTML = 'You have studied for ' + hours + 'Hhrs ' + minutes + 'Mins ' + secs + 'Secs';
     document.getElementById('pausemsg').innerHTML = 'Your break was ' + hours2 + 'Hhrs ' + minutes2 + 'Mins ' + secs2 + 'Secs long'; 
     document.getElementById('timer2').style.display = 'none';
@@ -68,7 +72,10 @@ function reset(){
     document.getElementById('minutes').innerHTML = '0' + minutes;
     document.getElementById('hours').innerHTML = '0' + hours;
     document.getElementById('stopmsg').innerHTML = '';
+    document.getElementById('pausemsg').innerHTML = '';
     document.getElementById('timer2').style.display = 'none';
+    document.getElementById('studying').style.display = 'none';
+    document.getElementById('pausing').style.display = 'none';
     clicked = false;
 }
 
