@@ -1,19 +1,37 @@
-nav ul{
-    list-style-type:none;
-    margin:0 auto;
-    background-color:black;
-    padding:0;
-    overflow:hidden;
-    margin-top:50px;
-    width:426px;
+body{
+    font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+    margin: 0;
 }
 
-nav ul li{
+.nav{
+    list-style-type:none;
+    background-color:rgb(176,176,179);
+    padding:0;
+    overflow:hidden;
+    margin-top:110px;
+    width:250px;
+    margin-left:74px;
+    border-radius: 20px;
+    z-index:1;
+    position:relative;
+}
+
+.nav li{
     display:inline;
-    font-family:Courier;
+    font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
    
 }
-nav ul li a{
+.nav li a{
     display:block;
     color:white;
     padding:14px 16px;
@@ -21,8 +39,8 @@ nav ul li a{
     text-align: center;
 }
 
-nav ul li a:hover{
-    background-color:#333;
+.nav li a:hover{
+    background-color:rgb(40,40,48);
 }
 
 li a, .dropbtn {
@@ -33,16 +51,16 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: #333;
+    background-color: rgb(40,40,48);
 }
 
 .dropdown-content {
     display: none;
     position:absolute;
-    background-color: #333;
+    background-color:rgb(40,40,48);
     min-width: 160px;
-    margin-top:-47px;
-    margin-left:426px;
+    margin-top:-48px;
+    margin-left:250px;
 }
 
 .dropdown-content a {
@@ -54,7 +72,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color:rgb(40,40,48);
     color:black;
 }
 
@@ -81,17 +99,29 @@ li a:hover, .dropdown:hover .dropbtn {
     color:white;
 }
 
+div.control{
+    position:relative;
+}
+
 div.control button{
     background-color:white;
     color:black;
-    border:3px solid black;
-    width:250px;
-    font-size:30px;
-    font-family:Courier;
+    width:200px;
+    font-size:20px;
+    font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+    border:none;
+    text-decoration: underline;
+}
+div.control button:focus{
+    outline:0;
 }
 
 div.timer{
-    border:2px solid black;
+    border:1px solid black;
     width:200px;
     height:50px;
     line-height:50px;
@@ -117,38 +147,67 @@ div.timer{
 }
 
 #pause{
-    font-style:Courier;
     font-size:30px;
     display: none;
 }
 
-#stopmsg{
-    width:800px;
-    margin:0 auto;
-    font-family:Courier;
-    font-size:30px;
-    padding-left:90px;
+.cssanimations.csstransforms #stopmsg {
+    -webkit-transform: translateY(-50px);
+    -webkit-animation: slideDown 2.5s 1.0s 1 ease forwards;
+    -moz-transform:    translateY(-50px);
+    -moz-animation:    slideDown 2.5s 1.0s 1 ease forwards;
 }
 
-#pausemsg{
-    width:800px;
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+#stopmsg{
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    width:400px;
     margin:0 auto;
-    font-family:Courier;
-    font-size:30px;
-    padding-left:90px;
+    left: 0;
+    right: 0;
+    background:rgb(40,40,48); 
+    color:white;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden; 
+    padding:0;
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+     -webkit-animation: fadein 3s;
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-50px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-50px); }
+    10%, 90% { -moz-transform: translateY(0px); }
 }
 
 div.logo{
-    margin:0 auto;
-    width:290px;
     height:60px;
     background-repeat: no-repeat;
     background-image:url('./logo.png');
-    margin-top:200px;
-}
-
-div.logo:hover{
-    background:url('./logo2.png');
+    margin-top:50px;
+    margin-left:50px;
 }
 
 #quickwrap{
@@ -169,10 +228,9 @@ div.logo:hover{
 
 #studying{
     margin:0 auto;
-    margin-left:640px;
+    margin-left:635px;
     font-size:30px;
     margin-top:50px;
-    font-family:Courier;
     -webkit-animation: fadein 2s;
     display:none;
 }
@@ -222,40 +280,55 @@ div.logo:hover{
 }
 
 #pausing{
-    float:left;
-    margin:-90px;
-    padding:0;
-    margin-left:100px;
-    margin-top:50px;
     -webkit-animation: fadein 2s;
     display:none;
+    position:absolute;
+    margin-left:1070px;
+    margin-top:-15px;
+    width:250px;
+    list-style-type:none;
+    background-color:rgb(176,176,179);
+    overflow:hidden;
+    padding:0;
+    border-radius: 20px;
+    z-index:1;
 }
 
-#pausenav{
-    list-style-type: none;
-    margin: 0;
+
+#pausing li{
+    display:inline;
+    font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
     padding:0;
-    width: 160px;
-    background-color: #f1f1f1;
-    font-family:Courier;
 }
 
 #pausing li a{
-    display: block;
-    color: black;
-    text-decoration: none;
+    display:block;
+    color:white;
+    padding:14px 16px;
+    text-decoration:none;
+    text-align: center;
 }
 
-#pausing li a:hover{
-    background-color: #555;
-    color: white;
+#pausing ul li a:hover{
+    background-color:rgb(40,40,48);
 }
 
 #animatepause{
-    font-family:Courier;
+    margin:0 auto;
+    margin-left:635px;
     font-size:30px;
+    margin-top:50px;
+    font-size:30px;
+    display:none;
+    -webkit-animation: fadein 2s;
     
 }
+
 #animatepause span:nth-child(2) {
     animation-delay: .2s;
 }
@@ -271,12 +344,37 @@ div.logo:hover{
     animation-fill-mode: both;
 }
 
+#section{
+    margin:0 auto;
+    margin-top:-290px;
+}
 
 footer{
-    background-color:black;
+    background-color:rgb(40,40,48);
     color:white;
-    text-align: center;
     width:100%;
     position: absolute;
     bottom:0;
+    height:30px;
+    padding-top:20px;
+    text-align:center;
 }
+
+#date{
+    float:right;
+    color:black;
+    font-size:40px;
+    position:relative;
+    margin-right:550px;
+    margin-top:140px;
+}
+
+#time{
+    float:right;
+    color:black;
+    font-size:40px;
+    position:relative;
+    margin-right:-190px;
+    margin-top:220px;
+}
+

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
     <link rel='stylesheet' type='text/css' href='./studystyle.css'>
+    <script type="text/javascript" src="./timer.js"></script>
 </head>
-<body>
+<body onload="displayDate(); startTime();">
     <div class="logo"></div>
-    <nav>
-        <ul>
+    <div id="date"></div>
+    <div id="time"></div>
+        <ul class="nav">
             <li><a href="./customed.html">Customed Session</a></li>
             <li><a href="./quickstart.html">Quick Session</a></li>
             <li class="dropdown">
@@ -18,7 +20,6 @@
             </li>
             <li><a href="#">Find a study buddy</a></li>
         </ul>
-    </nav>
     <footer>&#169;Jasmine Latendresse &nabla; By a student for students</footer>
 </body>
 </html>

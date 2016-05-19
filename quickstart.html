@@ -4,37 +4,45 @@
     <script type="text/javascript" src="./timer.js"></script>
 </head>
 <body>
+    <div id="stopmsg"></div>
+    <a href="./studylayout.html"><div class="logo"></div></a>
+        <ul class="nav">
+            <li><a href="./customed.html">Customed Session</a></li>
+            <li><a href="./quickstart.html">Quick Session</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">Links</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+            <li><a href="#">Find a study buddy</a></li>
+        </ul>
     <div id="quickwrap">
-        <div id="pausing">
-        <div id="animatepause">Pausing<span>.</span><span>.</span><span>.</span></div>
-        <ul id="pausenav">
+        <ul id="pausing">
             <li><a href="http://www.300hours.com/articles/11-exercise-stretches-to-break-up-the-study-monotony" target="_blank">Stretch</a></li>
             <li><a href="https://www.reddit.com/r/aww/" target="_blank">Check out cute animals</a></li>
             <li><a href="http://www.ulifeline.org/get_help_now" target="_blank">Take Care</a></li>
             <li><a href="./play.html" target="_blank">Play</a></li>
         </ul>
-        </div>
-        <a href="./studylayout.html"><div class="logo"></div></a>
+        <div id="section">
         <div class="timer">
             <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
         </div>
         <div class="control">
             <table class="timetable" cellspacing="10">
-                <tr>
-                    <td><button id="startButton" onclick="start();" >Start</button></td>
-                    <td><button id="pauseButton" onclick="pause();">Pause</button></td>
-                </tr>
-                <tr>
-                    <td><button id="stopButton" onclick="stop();">Stop</button></td>
-                    <td><button id="resetButton" onclick="reset();">Reset</button></td>
-                </tr>
+                <tr><td><button id="startButton" onclick="start();" >Start</button></td></tr>
+                <tr><td><button id="pauseButton" onclick="pause();">Pause</button></td></tr>
+                <tr><td><button id="stopButton" onclick="stop();">Stop</button></td></tr>
+                <tr><td><button id="resetButton" onclick="reset();">Reset</button></td></tr>
             </table>
         </div>
         <div id="studying">Studying<span>.</span><span>.</span><span>.</span></div>
-        <div id="stopmsg"></div>
-        <div id="pausemsg"></div>
+        <div id="animatepause">Pausing<span>.</span><span>.</span><span>.</span></div>
         <div id="timer2">
             <span id="hours2">00</span>:<span id="minutes2">00</span>:<span id="seconds2">00</span>
+        </div>
         </div>
     </div>
     <footer>&#169;Jasmine Latendresse &nabla; By a student for students</footer>
