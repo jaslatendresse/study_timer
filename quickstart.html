@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <link rel='stylesheet' type='text/css' href='./studystyle.css'>
     <script type="text/javascript" src="./timer.js"></script>
 </head>
 <body>
-    <div id="stopmsg"></div>
+    <div id="stopmsg">Study time: <span id='stophours'></span> hours <span id="stopmins"></span> minutes and <span id="stopsecs"></span> seconds.<br>Pause time: <span id="pausehours"></span> hours <span id="pausemins"></span> minutes and <span id="pausesecs"></span> seconds.</div>
     <a href="./studylayout.html"><div class="logo"></div></a>
         <ul class="nav">
             <li><a href="./customed.html">Customed Session</a></li>
@@ -38,8 +39,7 @@
                 <tr><td><button id="resetButton" onclick="reset();">Reset</button></td></tr>
             </table>
         </div>
-        <div id="studying">Studying<span>.</span><span>.</span><span>.</span></div>
-        <div id="animatepause">Pausing<span>.</span><span>.</span><span>.</span></div>
+        <div id="studying"><span id="currentmsg">Studying</span><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
         <div id="timer2">
             <span id="hours2">00</span>:<span id="minutes2">00</span>:<span id="seconds2">00</span>
         </div>

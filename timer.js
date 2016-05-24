@@ -19,8 +19,7 @@ function start(){
         clicked = true;
         document.getElementById('studying').style.display = 'block';
         document.getElementById('pausing').style.display = 'none';
-        document.getElementById('animatepause').style.display = 'none';
-        document.getElementById('stopmsg').innerHTML = '';
+        $(document.getElementById('stopmsg')).fadeOut(800);
     }
     else if(clicked === true){};
 }
@@ -42,13 +41,12 @@ function setTimePause(){
 
 function pause(){
     clearInterval(timer);
-    timer2 = setInterval('setTimePause()',1000);
-    document.getElementById('studying').style.display = 'none';
-    document.getElementById('pausing').style.display = 'block';
-    document.getElementById('animatepause').style.display = 'block';
+    timer2 = setInterval('setTimePause()',800);
+    document.getElementById('currentmsg').innerHTML = 'Pausing';
+    $(document.getElementById('pausing')).fadeIn(800);
+    $(document.getElementById('stopmsg')).fadeOut(800);
     timer = null;
     clicked = false;
-    document.getElementById('stopmsg').innerHTML = '';
 }
 
 function stop(){
@@ -57,12 +55,16 @@ function stop(){
     timer = null;
     timer2 = null;
     clicked = false;
+    document.getElementById("stophours").innerHTML = hours;
+    document.getElementById("stopmins").innerHTML = minutes;
+    document.getElementById("stopsecs").innerHTML = secs;
+    document.getElementById("pausehours").innerHTML = hours2;
+    document.getElementById("pausemins").innerHTML = minutes2;
+    document.getElementById("pausesecs").innerHTML = secs2;
     
-    document.getElementById('studying').style.display = 'none';
-    document.getElementById('pausing').style.display = 'none';
-    document.getElementById('stopmsg').innerHTML = '<b>Study time</b>: ' + hours + ' hours, ' + minutes + ' minutes and ' + secs + ' seconds.<br>' + '<b>Pause time</b>: ' + hours2 + ' hours, ' + minutes2 + ' minutes and ' + secs2 + ' seconds.';
-    document.getElementById('timer2').style.display = 'none';
-    document.getElementById('animatepause').style.display = 'none';
+    $(document.getElementById('studying')).fadeOut(800);
+    $(document.getElementById('pausing')).fadeOut(800);
+    document.getElementById('stopmsg').style.display = 'block';
 }
 
 function reset(){
@@ -72,14 +74,15 @@ function reset(){
     secs2 = 0;
     hours2 = 0; 
     minutes2 = 0;
+    clearInterval(timer);
     document.getElementById('seconds').innerHTML = '0' + secs;
     document.getElementById('minutes').innerHTML = '0' + minutes;
     document.getElementById('hours').innerHTML = '0' + hours;
-    document.getElementById('stopmsg').innerHTML = '';
     document.getElementById('timer2').style.display = 'none';
-    document.getElementById('studying').style.display = 'none';
-    document.getElementById('pausing').style.display = 'none';
-    document.getElementById('animatepause').style.display = 'none';
+    $(document.getElementById('stopmsg')).fadeOut(800);
+    $(document.getElementById('studying')).fadeOut(800);
+    $(document.getElementById('pausing')).fadeOut(800);
+    
     clicked = false;
 }
 
@@ -127,3 +130,5 @@ function startTime() {
         startTime()
     }, 500);
 }
+
+

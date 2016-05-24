@@ -190,7 +190,7 @@ div.timer{
     -webkit-box-shadow: 0 0 5px black;
     -moz-box-shadow:    0 0 5px black;
     box-shadow:         0 0 5px black;
-     -webkit-animation: fadein 3s;
+    display:none;
 }
 
 @-webkit-keyframes slideDown {
@@ -231,11 +231,10 @@ div.logo{
     margin-left:635px;
     font-size:30px;
     margin-top:50px;
-    -webkit-animation: fadein 2s;
     display:none;
 }
 
-#studying span {
+#studying span.dot {
     animation-name: blink;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -280,10 +279,9 @@ div.logo{
 }
 
 #pausing{
-    -webkit-animation: fadein 2s;
     display:none;
     position:absolute;
-    margin-left:1070px;
+    margin-left:1110px;
     margin-top:-15px;
     width:250px;
     list-style-type:none;
@@ -318,31 +316,6 @@ div.logo{
     background-color:rgb(40,40,48);
 }
 
-#animatepause{
-    margin:0 auto;
-    margin-left:635px;
-    font-size:30px;
-    margin-top:50px;
-    font-size:30px;
-    display:none;
-    -webkit-animation: fadein 2s;
-    
-}
-
-#animatepause span:nth-child(2) {
-    animation-delay: .2s;
-}
-
-#animatepause span:nth-child(3) {
-    animation-delay: .4s;
-}
-
-#animatepause span{
-    animation-name: blink;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-}
 
 #section{
     margin:0 auto;
