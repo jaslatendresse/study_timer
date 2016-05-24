@@ -17,8 +17,9 @@ function start(){
         clearInterval(timer2);
         timer2 = null;
         clicked = true;
-        document.getElementById('studying').style.display = 'block';
-        document.getElementById('pausing').style.display = 'none';
+        document.getElementById('currentmsg').innerHTML = 'Studying';
+        $(document.getElementById('studying')).fadeIn(800);
+        $(document.getElementById('pausing')).fadeOut(800);
         $(document.getElementById('stopmsg')).fadeOut(800);
     }
     else if(clicked === true){};
@@ -65,6 +66,8 @@ function stop(){
     $(document.getElementById('studying')).fadeOut(800);
     $(document.getElementById('pausing')).fadeOut(800);
     document.getElementById('stopmsg').style.display = 'block';
+    
+    clicked = false;
 }
 
 function reset(){
@@ -78,7 +81,6 @@ function reset(){
     document.getElementById('seconds').innerHTML = '0' + secs;
     document.getElementById('minutes').innerHTML = '0' + minutes;
     document.getElementById('hours').innerHTML = '0' + hours;
-    document.getElementById('timer2').style.display = 'none';
     $(document.getElementById('stopmsg')).fadeOut(800);
     $(document.getElementById('studying')).fadeOut(800);
     $(document.getElementById('pausing')).fadeOut(800);

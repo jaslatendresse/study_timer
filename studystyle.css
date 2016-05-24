@@ -114,7 +114,6 @@ div.control button{
 	font-weight: 400;
 	line-height: 20px;
     border:none;
-    text-decoration: underline;
 }
 div.control button:focus{
     outline:0;
@@ -228,7 +227,7 @@ div.logo{
 
 #studying{
     margin:0 auto;
-    margin-left:635px;
+    margin-left:652px;
     font-size:30px;
     margin-top:50px;
     display:none;
