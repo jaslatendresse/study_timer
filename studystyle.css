@@ -211,6 +211,9 @@ div.logo{
 
 #quickwrap{
     margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    
 }
 
 @keyframes blink {
@@ -281,7 +284,7 @@ div.logo{
     display:none;
     position:absolute;
     margin-left:1110px;
-    margin-top:-15px;
+    margin-top:-211px;
     width:250px;
     list-style-type:none;
     background-color:rgb(176,176,179);
@@ -350,3 +353,6 @@ footer{
     margin-top:220px;
 }
 
+#login{
+    margin-left:00px;
+}

@@ -63,6 +63,7 @@ function stop(){
     document.getElementById("pausemins").innerHTML = minutes2;
     document.getElementById("pausesecs").innerHTML = secs2;
     
+    //$('#studying').fadeOut(800);
     $(document.getElementById('studying')).fadeOut(800);
     $(document.getElementById('pausing')).fadeOut(800);
     document.getElementById('stopmsg').style.display = 'block';
